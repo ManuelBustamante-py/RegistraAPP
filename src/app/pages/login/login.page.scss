@@ -1,0 +1,144 @@
+ion-content {
+  --ion-background-color: transparent !important;
+  background: linear-gradient(
+    0deg, 
+    rgba(0, 0, 0, 0.7), 
+    rgba(0, 0, 0, 0.1)
+  ), 
+  url('/assets/registrapp.png') no-repeat center / cover; /* Cambia 'center center' a 'center top' */
+}
+
+.logo-container {
+  margin-top: 12%;
+  text-align: center; /* Centra el logo horizontalmente */
+  padding: 20px 0; /* Ajusta el espacio alrededor del logo */
+}
+
+.logo-container img {
+  max-width: 300px; /* Ajusta el tamaño máximo del logo según sea necesario */
+  height: auto; /* Mantiene la proporción del logo */
+}
+
+
+  
+  .login-section {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    position: fixed;
+    border-top-left-radius: 46px;
+    border-top-right-radius: 46px;
+    overflow-y: auto;  /* Añadimos scroll si el contenido es mayor que la altura */
+    max-height: 100vh;  /* Aseguramos que no se salga de la pantalla */
+    padding: 20px;
+  
+    .heading {
+      margin-top: 20px;
+      h1 {
+        font-size: 1.6rem;
+        font-weight: bolder;
+      }
+      p {
+        margin-top: 20px;
+        font-size: 1rem;
+        color: #7b7b7b;
+      }
+    }
+  
+    .login-form {
+      .form-input {
+        position: relative;
+        margin-bottom: 10px;
+  
+        ion-item::part(native) {
+          padding-left: 0;
+        }
+  
+        ion-item {
+          position: relative;
+          font-size: 1.2rem;
+          left: 0;
+          z-index: 1;
+        }
+  
+        ion-label {
+          position: absolute;
+          top: -10px;
+          left: 15px;
+          font-weight: bolder;
+          font-size: 0.8rem;
+          color: #7b7b7b;
+        }
+  
+        ion-input {
+          font-size: 0.9rem;
+          --padding-start: 36px;
+          --padding-top: 12px;
+          color: #7b7b7b;
+        }
+      }
+    }
+  
+    .action-button {
+      text-align: center;
+  
+      .login-button {
+        --background:#F8B500;
+        width: 100%;
+        font-weight: bold;
+      }
+  
+      p {
+        margin-top: 15px;
+        font-size: 1rem;
+        color: #7b7b7b;
+      }
+  
+      .singup-button {
+        --border-color: #b4b4b4;
+        color: #000;
+        font-weight: bold;
+        margin-top: 3px;
+        width: 100%;
+      }
+    }
+  }
+ 
+  .login-section {
+    .login-form {
+      .form-input {
+        position: relative;
+        
+        .error-message {
+          color: var(--ion-color-danger);
+          font-size: 12px;
+          position: absolute;
+          bottom: -20px; // Ajusta según sea necesario
+          left: 0;
+          width: 100%;
+          text-align: left;
+        }
+      }
+    }
+  }
+  
+
+  .reset-password-text {
+    text-align: center;
+    margin-top: 10px;
+    
+    a {
+      color: #7b7b7b;
+      text-decoration: none;
+      font-size: 14px;
+    }
+  
+    a:hover {
+      text-decoration: none;
+    }
+  }
+  

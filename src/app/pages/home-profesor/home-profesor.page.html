@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>RegistrAPP - Profesor</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="openProfileMenu()">
+        <ion-icon name="person-circle-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-menu side="start" contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item routerLink="/home-profesor">Inicio</ion-item>
+      <ion-item routerLink="/mis-clases">Mis Clases</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-menu side="end" contentId="main-content" id="end">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Perfil</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item (click)="logout()">Cerrar sesión</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-content id="main-content">
+  <div class="welcome-message">
+    <h1>Bienvenido, Profesor {{ username }}</h1>
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="4">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Generar Código QR</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Genera un código QR para tu clase actual.
+            <ion-button expand="block" color="primary" (click)="generateQrCode()">Generar QR</ion-button>
+            <!-- Mostrar el QR generado -->
+            <div *ngIf="qrCodeValue">
+              <ngx-qrcode [qrc-value]="qrCodeValue" [qrc-size]="200"></ngx-qrcode>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="12" size-md="4">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Mis Clases</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Gestiona tus clases y horarios.
+            <ion-button expand="block" color="secondary">Ver Clases</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="12" size-md="4">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Reporte de Asistencia</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Revisa la asistencia de tus estudiantes.
+            <ion-button expand="block" color="tertiary" [routerLink]="'/reporte-asistencia'">Ver Reportes</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

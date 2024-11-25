@@ -1,0 +1,48 @@
+<ion-content>
+  <div class="logo-container">
+    <img src="/assets/logore.png" alt="Logo">
+  </div>
+  <div class="login-section ion-padding">
+    <div class="heading ion-padding">
+      <h1>Crea tu Cuenta</h1>
+      <p>Registrate para Continuar</p>
+    </div>
+    <div class="login-form ion-padding">
+      <div class="form-input">
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-item>
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input type="text" [(ngModel)]="name"></ion-input>
+        </ion-item>
+      </div>
+      <div class="form-input">
+        <ion-icon name="mail-outline"></ion-icon>
+        <ion-item>
+          <ion-label position="floating">Correo</ion-label>
+          <ion-input type="email" [(ngModel)]="email"></ion-input>
+        </ion-item>
+      </div>
+      <div class="form-input">
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+      </div>
+      <div class="form-input">
+        <ion-icon name="people-outline"></ion-icon>
+        <ion-item>
+          <ion-label>Rol</ion-label>
+          <ion-select [(ngModel)]="role">olawe
+            <ion-select-option value="profesor">Profesor</ion-select-option>
+            <ion-select-option value="alumno">Alumno</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </div>
+    </div>
+    <div class="action-button ion-padding">
+      <ion-button class="singup-button" size="large" (click)="signUp()">Registrate</ion-button>
+      <ion-button class="login-button" size="large" fill="outline" routerLink="/login">Iniciar Sesión</ion-button>
+    </div>
+  </div>
+</ion-content>

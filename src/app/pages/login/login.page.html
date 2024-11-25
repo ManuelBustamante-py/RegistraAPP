@@ -1,0 +1,34 @@
+<ion-content>
+  <div class="logo-container">
+    <img src="/assets/logore.png" alt="Logo">
+  </div>
+  <div class="login-section ion-padding">
+    <div class="heading ion-padding">
+      <h1>Bienvenido</h1>
+      <p>Inicia sesión para Continuar</p>
+    </div>
+    <div class="login-form ion-padding">
+      <div class="form-input">
+        <ion-icon name="mail-outline"></ion-icon>
+        <ion-item>
+          <ion-label position="floating">Correo</ion-label>
+          <ion-input type="email" [(ngModel)]="email" name="email" autocomplete="off"></ion-input>
+        </ion-item>
+      </div>
+      <div class="form-input">
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" [(ngModel)]="password" name="password" autocomplete="off"></ion-input>
+        </ion-item>
+      </div>
+    </div>
+    <div class="action-button ion-padding">
+      <ion-button class="login-button" size="large" (click)="login()">Iniciar Sesión</ion-button>
+      <p class="reset-password-text">
+        <a routerLink="/reset-password">Olvidaste tu contraseña?</a>
+      </p>
+      <ion-button class="singup-button" size="large" fill="outline" routerLink="/sing-up">Registrate</ion-button>
+    </div>
+  </div>
+</ion-content>
